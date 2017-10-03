@@ -77,7 +77,7 @@ for epoch in range(15):
 
 print('최적화 완료!')
 
-is_correct(tf.argmax(logits, 1), tf.argmax(Y, 1))
+is_correct = tf.argmax(logits, 1), tf.argmax(Y, 1)
 accuracy = tf.reduce_mean(tf.cast(is_correct, tf.float32))
 
 print('accuracy :',
