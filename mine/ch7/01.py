@@ -57,7 +57,7 @@ sess.run(tf.global_variables_initializer())
 batch_size = 100
 total_batch = int(mnist.train.num_examples / batch_size)
 
-for epoch in range(15):
+for epoch in range(30):
     total_cost = 0
 
     for i in range(total_batch):
@@ -68,7 +68,7 @@ for epoch in range(15):
             [optimizer, cost],
             feed_dict={X: batch_xs,
                        Y: batch_ys,
-                       keep_prob: 0.7})
+                       keep_prob: 0.5})
 
         total_cost += cost_val
 
