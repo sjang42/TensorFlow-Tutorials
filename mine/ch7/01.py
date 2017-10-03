@@ -86,5 +86,5 @@ print('accuracy :',
           feed_dict={
               X: mnist.test.images.reshape(-1, 28, 28, 1),
               Y: mnist.test.labels,
-              keep_prob: keep_prob
+              keep_prob: 1.
           }))
