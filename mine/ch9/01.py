@@ -83,10 +83,10 @@ for epoch in range(total_epoch):
         noise = get_noise(sample_size, n_noise)
         samples = sess.run(G, feed_dict={Z: noise})
 
-        fig, ax = plt.subplots(1, sample_size, figsize=(sample_size, 1))
+        fig, _ = plt.subplots(1, sample_size, figsize=(sample_size, 1))
 
-        for i in range(sample_size):
-            ax[i].set_axis_off()
+        # for i in range(sample_size):
+            # ax[i].set_axis_off()
             # ax[i].imshow(np.reshape(samples[i], (28, 28)))
 
         plt.savefig(
