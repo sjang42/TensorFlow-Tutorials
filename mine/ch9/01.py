@@ -87,7 +87,7 @@ for epoch in range(total_epoch):
 
         for i in range(sample_size):
             ax[i].set_axis_off()
-            ax[i].imshow(np.reshape(samples[i], (28, 28)))
+            # ax[i].imshow(np.reshape(samples[i], (28, 28)))
 
         plt.savefig(
             'samples/{}.png'.format(str(epoch).zfill(3)), bbox_inches='tight')
